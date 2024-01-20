@@ -18,13 +18,59 @@
 
 // console.log(result);
 
-let firstNumber = prompt("Введите число которое хотите возвести в степень");
-let secondNumber = prompt("Введите степень");
-// firstNumber = Number(firstNumber);
-// secondNumber = Number(secondNumber);
-const calculationResult = Number(firstNumber) ** Number(secondNumber);
+// FIRST SCRIPT
 
-console.log({ calculationResult });
-alert(`Результат: ${calculationResult}`);
+// let firstNumber = prompt("Введите число которое хотите возвести в степень");
+// let secondNumber = prompt("Введите степень");
+// // firstNumber = Number(firstNumber);
+// // secondNumber = Number(secondNumber);
+// const calculationResult = Number(firstNumber) ** Number(secondNumber);
 
-console.log("5" + 5);
+// console.log({ calculationResult });
+// alert(`Результат: ${calculationResult}`);
+
+// console.log("5" + 5);
+
+// // const result = Math.round(Math.random() * (max - min) + min);
+
+// // console.log(result);
+
+// // const message = "23123";
+
+// // const messageLength = message.length;
+// // console.log(messageLength);
+
+// // SECOND SCRIPT
+
+// const max = 300;
+// const min = 800;
+
+// const firstName = prompt("Enter your First name");
+// const lastName = prompt("Enter your Last name");
+// const fullName = firstName + " " + lastName;
+// const room = Math.round(Math.random() * (max - min) + min);
+// const type = "VIP";
+// const result = `Your registration data: ${fullName} Room Number: ${room} Room type: ${type}`;
+
+// console.log(result);
+
+// const brand = "Samsung";
+// const normalizedBrand = brand.toLowerCase();
+
+// console.log(normalizedBrand);
+
+const blackListedWord1 = "спам";
+const blackListedWord2 = "распродажа";
+
+const string1 = "спам";
+const string2 = "РАСПродажа";
+const string3 = "fatlivesmatter";
+
+console.log(string1.toLowerCase().includes(blackListedWord1));
+console.log(string1.toLowerCase().includes(blackListedWord2));
+
+console.log(string2.toLowerCase().includes(blackListedWord1));
+console.log(string2.toLowerCase().includes(blackListedWord2));
+
+console.log(string3.toLowerCase().includes(blackListedWord1));
+console.log(string3.toLowerCase().includes(blackListedWord2));
