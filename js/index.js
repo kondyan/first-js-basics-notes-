@@ -145,6 +145,39 @@
 //   console.log(callBack);
 // }
 
-for (let i = 0; i <= 50000; i += 1) {
-  console.log(i);
+// for (let i = 0; i <= 50000; i += 1) {
+//   console.log(i);
+// }
+
+// const employees = 4;
+// const minSalary = 500;
+// const maxSalary = 5000;
+// let totalSalary = 0;
+
+// for (let i = 0; i < employees; i += 1) {
+//   const salary = Math.round(
+//     Math.random() * (maxSalary - minSalary) + minSalary
+//   );
+//   console.log(`Salary of employeer number ${i} - ${salary}`);
+
+//   totalSalary += salary;
+// }
+
+// console.log(`Total salary of all employeers is ${totalSalary}`);
+
+const min = 0;
+const max = 5;
+let total = 0;
+
+for (let i = min; i <= max; i += 1) {
+  if (i % 2 !== 0) {
+    console.log("не чётное: ", i);
+    continue;
+  }
+
+  console.log("чётное: ", i);
+
+  total += i;
 }
+
+console.log("total = ", total);
