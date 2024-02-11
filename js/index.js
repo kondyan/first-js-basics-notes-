@@ -165,19 +165,36 @@
 
 // console.log(`Total salary of all employeers is ${totalSalary}`);
 
-const min = 0;
-const max = 5;
+// const min = 0;
+// const max = 5;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 2 !== 0) {
+//     console.log("не чётное: ", i);
+//     continue;
+//   }
+
+//   console.log("чётное: ", i);
+
+//   total += i;
+// }
+
+// console.log("total = ", total);
+
+const numbers = [
+  1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11, 120, 150, 125, 10050, 10051,
+];
+
 let total = 0;
 
-for (let i = min; i <= max; i += 1) {
-  if (i % 2 !== 0) {
-    console.log("не чётное: ", i);
+for (value of numbers) {
+  if (value % 2 !== 0) {
     continue;
+  } else {
+    console.log(value);
+    total += value;
   }
-
-  console.log("чётное: ", i);
-
-  total += i;
 }
 
-console.log("total = ", total);
+console.log(total);
