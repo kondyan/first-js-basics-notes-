@@ -213,13 +213,46 @@
 
 // console.log(message);
 
-const numbers = [1, 2, 3, 15, 26, 5];
-let biggestNumber = numbers[0];
+// const numbers = [1, 2, 3, 15, 26, 5];
+// let biggestNumber = numbers[0];
+
+// for (number of numbers) {
+//   if (number > biggestNumber) {
+//     biggestNumber = number;
+//   }
+// }
+
+// console.log(biggestNumber);
+
+// console.log("first line on laptop");
+
+// const inputNumber = prompt(
+//   "Guess a number, multiply your number by 2, add 7 and enter your number: "
+// );
+
+// const guessedNumber1 = inputNumber - 7;
+// const guessedNumber2 = guessedNumber1 / 2;
+// console.log(guessedNumber2);
+
+// const title = "Top 10 Benefits of React Framework";
+
+// const titleToLowerCase = title.toLowerCase().split();
+
+// const titleConnected = titleToLowerCase.join("-");
+
+// console.log(title);
+// console.log(titleToLowerCase);
+// console.log(titleConnected);
+
+const array1 = [1, 2, 3];
+const array2 = [10, 20, 30];
+
+const numbers = array1.concat(array2);
+
+let total = 0;
 
 for (number of numbers) {
-  if (number > biggestNumber) {
-    biggestNumber = number;
-  }
+  total += number;
 }
 
-console.log(biggestNumber);
+console.log(total);
