@@ -182,19 +182,44 @@
 
 // console.log("total = ", total);
 
-const numbers = [
-  1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11, 120, 150, 125, 10050, 10051,
-];
+// const numbers = [
+//   1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11, 120, 150, 125, 10050, 10051,
+// ];
 
-let total = 0;
+// let total = 0;
 
-for (value of numbers) {
-  if (value % 2 !== 0) {
-    continue;
-  } else {
-    console.log(value);
-    total += value;
+// for (value of numbers) {
+//   if (value % 2 !== 0) {
+//     continue;
+//   } else {
+//     console.log(value);
+//     total += value;
+//   }
+// }
+
+// console.log(total);
+
+// const logins = ["vasya", "petya", "senya"];
+// const loginToFind = prompt();
+
+// let message = "Login was not found";
+
+// for (value of logins) {
+//   if (value === loginToFind) {
+//     message = "Login has been found";
+//     break;
+//   }
+// }
+
+// console.log(message);
+
+const numbers = [1, 2, 3, 15, 26, 5];
+let biggestNumber = numbers[0];
+
+for (number of numbers) {
+  if (number > biggestNumber) {
+    biggestNumber = number;
   }
 }
 
-console.log(total);
+console.log(biggestNumber);
