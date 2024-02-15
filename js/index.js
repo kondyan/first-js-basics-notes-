@@ -255,4 +255,5 @@ for (number of numbers) {
   total += number;
 }
 
+//
 console.log(total);
