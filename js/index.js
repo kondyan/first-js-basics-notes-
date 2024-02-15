@@ -205,7 +205,7 @@
 // let message = "Login was not found";
 
 // for (value of logins) {
-//   if (value === loginToFind) {
+//   if (value == loginToFind) {
 //     message = "Login has been found";
 //     break;
 //   }
@@ -244,16 +244,49 @@
 // console.log(titleToLowerCase);
 // console.log(titleConnected);
 
-const array1 = [1, 2, 3];
-const array2 = [10, 20, 30];
+// const array1 = [1, 2, 3];
+// const array2 = [10, 20, 30];
 
-const numbers = array1.concat(array2);
+// const numbers = array1.concat(array2);
 
-let total = 0;
+// let total = 0;
 
-for (number of numbers) {
-  total += number;
-}
+// for (number of numbers) {
+//   total += number;
+// }
 
-//
-console.log(total);
+// console.log(total);
+
+// const add = function (x, y) {
+//   // .....
+//   console.log("this is function");
+//   console.log(x);
+//   console.log(y);
+// };
+
+// add(1, 30);
+
+const logins = ["vasya", "petya", "senya"];
+
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? "Login has been found"
+//     : "Login was not found";
+// };
+
+const findLoginNew = function (allLogins, loginToFind) {
+  for (value of allLogins) {
+    if (value == loginToFind) {
+      return "Login has been found";
+    }
+  }
+  return "Login was not found";
+};
+
+const testFnc = function (func, allLogins, loginToFind) {
+  return func(allLogins, loginToFind);
+};
+
+console.log(testFnc(findLoginNew, [1, 2], prompt()));
+// console.log(findLogin(logins, prompt()));
+// console.log(findLogin([1, 2], Number(prompt())));
