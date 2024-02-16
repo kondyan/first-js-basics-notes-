@@ -266,27 +266,52 @@
 
 // add(1, 30);
 
-const logins = ["vasya", "petya", "senya"];
+// const logins = ["vasya", "petya", "senya"];
 
-// const findLogin = function (allLogins, loginToFind) {
-//   return allLogins.includes(loginToFind)
-//     ? "Login has been found"
-//     : "Login was not found";
+// // const findLogin = function (allLogins, loginToFind) {
+// //   return allLogins.includes(loginToFind)
+// //     ? "Login has been found"
+// //     : "Login was not found";
+// // };
+
+// const findLoginNew = function (allLogins, loginToFind) {
+//   for (value of allLogins) {
+//     if (value == loginToFind) {
+//       return "Login has been found";
+//     }
+//   }
+//   return "Login was not found";
 // };
 
-const findLoginNew = function (allLogins, loginToFind) {
-  for (value of allLogins) {
-    if (value == loginToFind) {
-      return "Login has been found";
-    }
-  }
-  return "Login was not found";
-};
+// const testFnc = function (func, allLogins, loginToFind) {
+//   return func(allLogins, loginToFind);
+// };
 
-const testFnc = function (func, allLogins, loginToFind) {
-  return func(allLogins, loginToFind);
-};
-
-console.log(testFnc(findLoginNew, [1, 2], prompt()));
+// console.log(testFnc(findLoginNew, [1, 2], prompt()));
 // console.log(findLogin(logins, prompt()));
 // console.log(findLogin([1, 2], Number(prompt())));
+
+// const numbers = [1, 2, 3, 15, 26, 5];
+// let biggestNumber = numbers[0];
+
+// for (number of numbers) {
+//   if (number > biggestNumber) {
+//     biggestNumber = number;
+//   }
+// }
+
+// console.log(biggestNumber);
+
+const numbers = [1, 2, 3, 15, 26, 5];
+
+const findBiggestNumber = function (numbers) {
+  let biggestNumber = numbers[0];
+  for (number of numbers) {
+    if (number > biggestNumber) {
+      biggestNumber = number;
+    }
+  }
+  return biggestNumber;
+};
+
+console.log(findBiggestNumber(numbers));
