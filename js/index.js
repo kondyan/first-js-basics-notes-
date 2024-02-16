@@ -302,16 +302,51 @@
 
 // console.log(biggestNumber);
 
-const numbers = [1, 2, 3, 15, 26, 5];
+// const numbers = [1, 2, 3, 15, 26, 5];
 
-const findBiggestNumber = function (numbers) {
-  let biggestNumber = numbers[0];
-  for (number of numbers) {
-    if (number > biggestNumber) {
-      biggestNumber = number;
+// const findBiggestNumber = function (numbers) {
+//   let biggestNumber = numbers[0];
+
+//   for (number of numbers) {
+//     if (number > biggestNumber) {
+//       biggestNumber = number;
+//     }
+//   }
+
+//   return biggestNumber;
+// };
+
+// console.log(findBiggestNumber(numbers));
+
+// const fn = function (a, ...args) {
+//   return args;
+// };
+
+// console.log(fn("hello", 1, 2, 3));
+// console.log(fn("aloha", 1, 2, 3, 4, 5));
+// console.log(fn("hi", 1, 2, 3, 4, 5, 6, 7));
+
+// const add = function (...args) {
+//   let totalNumber = 0;
+//   for (arg of args) {
+//     totalNumber += number;
+//   }
+//   return totalNumber;
+// };
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5, 6));
+
+const filteNumbers = function (array, ...args) {
+  let totalArray = [];
+  for (arrayNumber of array) {
+    if (args.includes(arrayNumber)) {
+      totalArray.push(arrayNumber);
     }
   }
-  return biggestNumber;
+  return totalArray;
 };
 
-console.log(findBiggestNumber(numbers));
+console.log(filteNumbers([1, 2, 3], 1, 2, 3, 4, 5));
+console.log(filteNumbers([2, 4, 6], 7, 10, 15, 24, 254, 4));
+console.log(filteNumbers([1052, 23, 10], 124, 325, 9, 47, 10));
