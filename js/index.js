@@ -337,16 +337,119 @@
 // console.log(add(1, 2, 3));
 // console.log(add(1, 2, 3, 4, 5, 6));
 
-const filteNumbers = function (array, ...args) {
-  let totalArray = [];
-  for (arrayNumber of array) {
-    if (args.includes(arrayNumber)) {
-      totalArray.push(arrayNumber);
+// const filteNumbers = function (array, ...args) {
+//   let totalArray = [];
+//   for (arrayNumber of array) {
+//     if (args.includes(arrayNumber)) {
+//       totalArray.push(arrayNumber);
+//     }
+//   }
+//   return totalArray;
+// };
+
+// console.log(filteNumbers([1, 2, 3], 1, 2, 3, 4, 5));
+// console.log(filteNumbers([2, 4, 6], 7, 10, 15, 24, 254, 4));
+// console.log(filteNumbers([1052, 23, 10], 124, 325, 9, 47, 10));
+
+// function makeArray(firstArray, secondArray, maxLength) {
+
+//   const concatedArray = firstArray.concat(secondArray);
+
+//   return concatedArray.slice(0, maxLength);
+
+// }
+
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
+
+// function filterArray(numbers, value) {
+//   let filteredNumbers = [];
+
+//   for (element of numbers) {
+//     if (element > value) {
+//       filteredNumbers.push(element);
+//     }
+//   }
+
+//   return filteredNumbers;
+// }
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = Number(i);
+//     break;
+//   }
+// }
+// console.log(number);
+
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+    const productName = product.name;
+    for (item of this.items) {
+      if (item.name === productName) {
+        item.quantity += product.quantity;
+        return;
+      }
     }
-  }
-  return totalArray;
+    this.items.push(product);
+  },
+  remove(productName) {
+    const newArray = [];
+    for (item of this.items) {
+      if (item.name !== productName) {
+        newArray.push(item);
+      }
+    }
+    this.items = [...newArray];
+  },
+  clear() {
+    this.items = [];
+  },
+  countTotalprice() {
+    let totalPrice = 0;
+    for (item of this.items) {
+      totalPrice += item.price * item.quantity;
+    }
+    return totalPrice;
+  },
+  increaseQuantity(productName) {
+    for (item of this.items) {
+      if (item.name === productName) {
+        return (item.quantity += 1);
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    const newArray = [];
+    for (item of this.items) {
+      if (item.name === productName) {
+        item.quantity -= 1;
+        break;
+      }
+    }
+    for (item of this.items) {
+      if (item.quantity !== 0) {
+        newArray.push(item);
+      }
+    }
+    this.items = [...newArray];
+  },
 };
 
-console.log(filteNumbers([1, 2, 3], 1, 2, 3, 4, 5));
-console.log(filteNumbers([2, 4, 6], 7, 10, 15, 24, 254, 4));
-console.log(filteNumbers([1052, 23, 10], 124, 325, 9, 47, 10));
+cart.add({ name: "apple", price: 50, quantity: 2 });
+cart.add({ name: "apple", price: 50, quantity: 1 });
+cart.add({ name: "watermelon", price: 100, quantity: 3 });
+console.log(cart.getItems());
+console.log(cart.countTotalprice());
+
+cart.increaseQuantity("apple");
+
+console.log(cart.getItems());
+console.log(cart.countTotalprice());
