@@ -385,71 +385,95 @@
 // }
 // console.log(number);
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-  add(product) {
-    const productName = product.name;
-    for (item of this.items) {
-      if (item.name === productName) {
-        item.quantity += product.quantity;
-        return;
-      }
-    }
-    this.items.push(product);
-  },
-  remove(productName) {
-    const newArray = [];
-    for (item of this.items) {
-      if (item.name !== productName) {
-        newArray.push(item);
-      }
-    }
-    this.items = [...newArray];
-  },
-  clear() {
-    this.items = [];
-  },
-  countTotalprice() {
-    let totalPrice = 0;
-    for (item of this.items) {
-      totalPrice += item.price * item.quantity;
-    }
-    return totalPrice;
-  },
-  increaseQuantity(productName) {
-    for (item of this.items) {
-      if (item.name === productName) {
-        return (item.quantity += 1);
-      }
-    }
-  },
-  decreaseQuantity(productName) {
-    const newArray = [];
-    for (item of this.items) {
-      if (item.name === productName) {
-        item.quantity -= 1;
-        break;
-      }
-    }
-    for (item of this.items) {
-      if (item.quantity !== 0) {
-        newArray.push(item);
-      }
-    }
-    this.items = [...newArray];
-  },
-};
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items.map((item) => ({ ...item }));
+//   },
+//   add(product) {
+//     const productName = product.name;
+//     for (item of this.items) {
+//       if (item.name === productName) {
+//         item.quantity += product.quantity;
+//         return;
+//       }
+//     }
+//     this.items.push(product);
+//   },
+//   remove(productName) {
+//     const newArray = [];
+//     for (item of this.items) {
+//       if (item.name !== productName) {
+//         newArray.push(item);
+//       }
+//     }
+//     this.items = [...newArray];
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalprice() {
+//     let totalPrice = 0;
+//     for (item of this.items) {
+//       totalPrice += item.price * item.quantity;
+//     }
+//     return totalPrice;
+//   },
+//   increaseQuantity(productName) {
+//     for (item of this.items) {
+//       if (item.name === productName) {
+//         return (item.quantity += 1);
+//       }
+//     }
+//   },
+//   decreaseQuantity(productName) {
+//     const newArray = [];
+//     for (item of this.items) {
+//       if (item.name === productName) {
+//         item.quantity -= 1;
+//         break;
+//       }
+//     }
+//     for (item of this.items) {
+//       if (item.quantity !== 0) {
+//         newArray.push(item);
+//       }
+//     }
+//     this.items = [...newArray];
+//   },
+// };
 
-cart.add({ name: "apple", price: 50, quantity: 2 });
-cart.add({ name: "apple", price: 50, quantity: 1 });
-cart.add({ name: "watermelon", price: 100, quantity: 3 });
-console.log(cart.getItems());
-console.log(cart.countTotalprice());
+// cart.add({ name: "apple", price: 50, quantity: 2 });
+// cart.add({ name: "apple", price: 50, quantity: 1 });
+// cart.add({ name: "watermelon", price: 100, quantity: 3 });
 
-cart.increaseQuantity("apple");
+// console.log(cart.getItems());
+// console.log(cart.countTotalprice());
 
-console.log(cart.getItems());
-console.log(cart.countTotalprice());
+// cart.add({ name: "apple", price: 50, quantity: 2 });
+
+// console.log(cart.getItems());
+// console.log(cart.countTotalprice());
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[apartment.tags.length - 1];
+
+// console.log(lastTag);
