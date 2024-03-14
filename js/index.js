@@ -477,3 +477,93 @@
 // const lastTag = apartment.tags[apartment.tags.length - 1];
 
 // console.log(lastTag);
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (let color of colors) {
+//   console.log(color.hex);
+// }
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   let allValues = [];
+
+//   const keys = Object.keys(products[0]);
+
+//   console.log(keys);
+
+//   if (!keys.includes(propName)) {
+//     return allValues;
+//   }
+
+//   for (let value of products) {
+//     allValues.push(value[propName]);
+//     console.log(value);
+//   }
+//   return allValues;
+
+//   // Change code above this line
+// }
+
+// getAllPropValues("name");
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+
+//   for (let product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+
+//   return 0;
+
+//   // Change code above this line
+// }
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// // how u shouldnt do below ->
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// };
