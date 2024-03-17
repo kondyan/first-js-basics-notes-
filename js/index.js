@@ -567,3 +567,90 @@
 
 //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 // };
+
+// function add(...args) {
+//   let total = 0;
+//   for (let arg of args) {
+//     total += arg;
+//   }
+//   return total;
+
+// }
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+
+//     const indexOfBook = this.books.indexOf(oldName);
+
+//     if (indexOfBook !== -1) {
+//       this.books.splice(indexOfBook, 1, newName);
+//     }
+
+//     // Change code above this line
+//   },
+// };
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+
+//     const indexOfOldName = this.potions.indexOf(oldName);
+
+//     if (indexOfOldName !== -1) {
+//       this.potions[indexOfOldName] = newName;
+//     }
+
+//     // Change code above this line
+//   },
+// };
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+
+  getIndex(str) {
+    for (const [indexOf, potion] of this.potions.entries()) {
+      if (potion.name === str) {
+        return indexOf;
+      }
+    }
+
+    return -1;
+  },
+
+  addPotion(newPotion) {
+    if (this.getIndex(newPotion) !== -1) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.getIndex(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.getIndex(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
+};
