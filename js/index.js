@@ -606,51 +606,104 @@
 //   },
 // };
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   getIndex(str) {
+//     for (const [indexOf, potion] of this.potions.entries()) {
+//       if (potion.name === str) {
+//         return indexOf;
+//       }
+//     }
+
+//     return -1;
+//   },
+
+//   addPotion(newPotion) {
+//     if (this.getIndex(newPotion) !== -1) {
+//       return `Error! Potion ${newPotion} is already in your inventory!`;
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     const potionIndex = this.getIndex(potionName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   updatePotionName(oldName, newName) {
+//     const potionIndex = this.getIndex(oldName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${oldName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1, newName);
+//   },
+//   // Change code above this line
+// };
+
+const cans = [
+  {
+    index: 1,
+    fulled: false,
+    closed: false,
+    stickerOn: false,
+  },
+  {
+    index: 2,
+    fulled: false,
+    closed: false,
+    stickerOn: false,
   },
 
-  getIndex(str) {
-    for (const [indexOf, potion] of this.potions.entries()) {
-      if (potion.name === str) {
-        return indexOf;
-      }
-    }
-
-    return -1;
+  {
+    index: 3,
+    fulled: false,
+    closed: false,
+    stickerOn: false,
   },
 
-  addPotion(newPotion) {
-    if (this.getIndex(newPotion) !== -1) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    }
-
-    this.potions.push(newPotion);
+  {
+    index: 4,
+    fulled: false,
+    closed: false,
+    stickerOn: false,
   },
-  removePotion(potionName) {
-    const potionIndex = this.getIndex(potionName);
+];
 
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
-    }
-
-    this.potions.splice(potionIndex, 1);
-  },
-  updatePotionName(oldName, newName) {
-    const potionIndex = this.getIndex(oldName);
-
-    if (potionIndex === -1) {
-      return `Potion ${oldName} is not in inventory!`;
-    }
-
-    this.potions.splice(potionIndex, 1, newName);
-  },
-  // Change code above this line
+const canFulling = (can) => {
+  can.fulled = true;
+  return can;
 };
+
+const canClosing = (can) => {
+  can.closed = true;
+  return can;
+};
+
+const canStickerOn = (can) => {
+  can.stickerOn = true;
+  return can;
+};
+
+// const cansDone = cans
+//   .map((can) => canFulling(can))
+//   .map((can) => canClosing(can))
+//   .map((can) => canStickerOn(can));
+
+const cansDone = cans.map(canFulling).map(canClosing).map(canStickerOn);
+
+console.log(cansDone);
