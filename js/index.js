@@ -655,55 +655,55 @@
 //   // Change code above this line
 // };
 
-const cans = [
-  {
-    index: 1,
-    fulled: false,
-    closed: false,
-    stickerOn: false,
-  },
-  {
-    index: 2,
-    fulled: false,
-    closed: false,
-    stickerOn: false,
-  },
+// const cans = [
+//   {
+//     index: 1,
+//     fulled: false,
+//     closed: false,
+//     stickerOn: false,
+//   },
+//   {
+//     index: 2,
+//     fulled: false,
+//     closed: false,
+//     stickerOn: false,
+//   },
 
-  {
-    index: 3,
-    fulled: false,
-    closed: false,
-    stickerOn: false,
-  },
+//   {
+//     index: 3,
+//     fulled: false,
+//     closed: false,
+//     stickerOn: false,
+//   },
 
-  {
-    index: 4,
-    fulled: false,
-    closed: false,
-    stickerOn: false,
-  },
-];
+//   {
+//     index: 4,
+//     fulled: false,
+//     closed: false,
+//     stickerOn: false,
+//   },
+// ];
 
-const canFulling = (can) => {
-  can.fulled = true;
-  return can;
-};
+// const canFulling = (can) => {
+//   can.fulled = true;
+//   return can;
+// };
 
-const canClosing = (can) => {
-  can.closed = true;
-  return can;
-};
+// const canClosing = (can) => {
+//   can.closed = true;
+//   return can;
+// };
 
-const canStickerOn = (can) => {
-  can.stickerOn = true;
-  return can;
-};
+// const canStickerOn = (can) => {
+//   can.stickerOn = true;
+//   return can;
+// };
 
-// const cansDone = cans
-//   .map((can) => canFulling(can))
-//   .map((can) => canClosing(can))
-//   .map((can) => canStickerOn(can));
+// // const cansDone = cans
+// //   .map((can) => canFulling(can))
+// //   .map((can) => canClosing(can))
+// //   .map((can) => canStickerOn(can));
 
-const cansDone = cans.map(canFulling).map(canClosing).map(canStickerOn);
+// const cansDone = cans.map(canFulling).map(canClosing).map(canStickerOn);
 
-console.log(cansDone);
+// console.log(cansDone);
