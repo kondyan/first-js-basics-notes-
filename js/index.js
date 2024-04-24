@@ -707,3 +707,10 @@
 // const cansDone = cans.map(canFulling).map(canClosing).map(canStickerOn);
 
 // console.log(cansDone);
+
+function openOrSenior(data) {
+  // ...
+  return data.map(([age, level]) =>
+    age >= 55 && level > 7 ? "Senior" : "Open"
+  );
+}
