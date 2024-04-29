@@ -708,9 +708,94 @@
 
 // console.log(cansDone);
 
-function openOrSenior(data) {
-  // ...
-  return data.map(([age, level]) =>
-    age >= 55 && level > 7 ? "Senior" : "Open"
-  );
-}
+// function openOrSenior(data) {
+//   // ...
+//   return data.map(([age, level]) =>
+//     age >= 55 && level > 7 ? "Senior" : "Open"
+//   );
+// }
+
+// console.log(_.isEmpty({}));
+
+// const user = {
+//   name: "mango",
+//   location: {
+//     cords: [1, 2],
+//     city: "Zurich",
+//   },
+// };
+
+// // lodash
+// console.log(_.get(user, "location.cords[0]"));
+
+// // error if theres no path .location
+// console.log(user.location.cords[0]);
+
+// // modern syntax, no error even without path
+// console.log(user?.location?.cords[0]);
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza("Ultracheese", function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}`);
+// });
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, callback, callback1) {
+//     if (this.pizzas.some((elem) => elem === pizzaName)) {
+//       return callback(pizzaName);
+//     }
+//     return callback1(
+//       `There is no pizza with a name ${pizzaName} in the assortment.`
+//     );
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
+const allGenres = books.flatMap((book) => book.genres);
+const uniqueGenres = allGenres.filter(
+  (elem, ind, books) => books.indexOf(elem) === ind
+);
