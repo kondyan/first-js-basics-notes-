@@ -777,25 +777,33 @@
 // pizzaPalace.order("Big Mike", makePizza, onOrderError);
 // pizzaPalace.order("Vienna", makePizza, onOrderError);
 
-const books = [
-  {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    genres: ["adventure", "history"],
-  },
-  {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
-    genres: ["fiction", "mysticism"],
-  },
-  {
-    title: "Redder Than Blood",
-    author: "Tanith Lee",
-    genres: ["horror", "mysticism", "adventure"],
-  },
-];
-// Change code below this line
-const allGenres = books.flatMap((book) => book.genres);
-const uniqueGenres = allGenres.filter(
-  (elem, ind, books) => books.indexOf(elem) === ind
-);
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap((book) => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (elem, ind, books) => books.indexOf(elem) === ind
+// );
+
+// // Change code below this line
+// const getFriends = (users) => {
+//   return users
+//     .flatMap((user) => user.friends)
+//     .filter((friend, friendInd, users) => friendInd === users.indexOf(friend));
+// };
+// // Change code above this line
