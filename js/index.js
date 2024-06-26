@@ -933,3 +933,8 @@
 // const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
 
 // const alphabeticalAuthors = [...authors].sort();
+
+const productRef = document.createElement("article");
+productRef.classList.add("product");
+
+const titleRef = document.createElement("h2");
