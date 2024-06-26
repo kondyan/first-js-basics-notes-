@@ -807,3 +807,21 @@
 //     .filter((friend, friendInd, users) => friendInd === users.indexOf(friend));
 // };
 // // Change code above this line
+
+class Car {
+  constructor({ brand, model, price } = {}) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+
+  changeBrand(newBrand) {
+    this.brand = newBrand;
+  }
+}
+
+const myCar = new Car({ brand: "BMW", model: "M4", price: 50000 });
+console.log(myCar);
+
+myCar.changeBrand("Mercedes");
+console.log(myCar);
