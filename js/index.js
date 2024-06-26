@@ -808,25 +808,24 @@
 // };
 // // Change code above this line
 
-<<<<<<< HEAD
-class Car {
-  constructor({ brand, model, price } = {}) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
-  }
+// class Car {
+//   constructor({ brand, model, price } = {}) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
 
-  changeBrand(newBrand) {
-    this.brand = newBrand;
-  }
-}
+//   changeBrand(newBrand) {
+//     this.brand = newBrand;
+//   }
+// }
 
-const myCar = new Car({ brand: "BMW", model: "M4", price: 50000 });
-console.log(myCar);
+// const myCar = new Car({ brand: "BMW", model: "M4", price: 50000 });
+// console.log(myCar);
 
-myCar.changeBrand("Mercedes");
-console.log(myCar);
-=======
+// myCar.changeBrand("Mercedes");
+// console.log(myCar);
+
 // const users = [
 //   {
 //     name: "Moore Hensley",
@@ -934,4 +933,3 @@ console.log(myCar);
 // const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
 
 // const alphabeticalAuthors = [...authors].sort();
->>>>>>> 206b6718a4639b1341366304ac0301bddbf89963
