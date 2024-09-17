@@ -934,7 +934,22 @@
 
 // const alphabeticalAuthors = [...authors].sort();
 
-const productRef = document.createElement("article");
-productRef.classList.add("product");
+// const productRef = document.createElement("article");
+// productRef.classList.add("product");
 
-const titleRef = document.createElement("h2");
+// const titleRef = document.createElement("h2");
+
+let result = [];
+for (i of nums) {
+  const x = target - i;
+  if (
+    nums.includes(x, nums.indexOf(i) + 1) &&
+    nums.indexOf(x, nums.indexOf(i) + 1) !== nums.indexOf(i)
+  ) {
+    const iIndex = nums.indexOf(i);
+    const xIndex = nums.indexOf(x, iIndex + 1);
+    result.push(iIndex, xIndex);
+    break;
+  }
+}
+return result;
